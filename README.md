@@ -25,7 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## PrimeNG Get started 
 
-npm install primeng-lts --save
+npm install primeng-lts --save 
+
 npm install primeicons --save
 
 ## Further help
