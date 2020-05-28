@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
+import {Car} from 'src/app/model/car';
 import { HttpClient } from '@angular/common/http';
-import { Car } from 'src/app/model/car';
 
-@Injectable()
-export class CarService {
-
-    constructor(private http: HttpClient) {}
+@Injectable({
+  providedIn: 'root'
+})
+export class CarservicesService {
+  constructor(private http: HttpClient) {}
 
     getCarsSmall() {
         return this.http.get<any>('src/app/data/car.json')
             .toPromise()
-            .then(res => res.data as Car[])
+            .then(res => <Car[]> res.data)
             .then(data => data);
     }
 }

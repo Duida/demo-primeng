@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MessageService} from 'primeng-lts/api';
-import { CarService} from 'src/app/services/carservices';
+import { CarservicesService} from 'src/app/services/carservices.service';
 import { Car } from 'src/app/model/car';
 
 @Component({
@@ -13,7 +13,7 @@ export class ValidationComponent  {
 
   cars: Car[];
 
-    constructor(private carService: CarService, private messageService: MessageService)  {}
+    constructor(private carService: CarservicesService, private messageService: MessageService)  {}
 
     initData()  {
         this.messageService.add({severity:'success', summary:'Data Initialized', detail:'Render Completed'});

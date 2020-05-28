@@ -1,4 +1,8 @@
 <h2>Messages</h2>
+
+<div class="p-grid">
+<div class="p-col">
+
 <p-messages [(value)]="msgs"></p-messages>
 
 <h3 class="first">Basic</h3>
@@ -29,4 +33,9 @@
 <div style="margin-top:30px">
     <input type="text" pInputText placeholder="Email" class="ng-dirty ng-invalid">
     <p-message severity="error"></p-message>
+</div>
+</div>
+<div class="p-col">
+<app-toast></app-toast>
+</div>
 </div>
